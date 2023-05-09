@@ -20,8 +20,8 @@ public struct hkMatrix4f
 	[FieldOffset(0x38)] public float M23;
 	[FieldOffset(0x3C)] public float M33;
 	
-	[FieldOffset(0x00)] public hkVector4f Column0;
-	[FieldOffset(0x10)] public hkVector4f Column1;
-	[FieldOffset(0x20)] public hkVector4f Column2;
-	[FieldOffset(0x30)] public hkVector4f Column3;
+	[FieldOffset(0x00)] [IDAIgnore] public hkVector4f Column0;
+	[FieldOffset(0x10)] [IDAIgnore] public hkVector4f Column1;
+	[FieldOffset(0x20)] [IDAIgnore] public hkVector4f Column2;
+	[FieldOffset(0x30)] [IDAIgnore] public hkVector4f Column3;
 }

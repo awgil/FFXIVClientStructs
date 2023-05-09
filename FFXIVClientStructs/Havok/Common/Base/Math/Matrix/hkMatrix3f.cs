@@ -16,7 +16,7 @@ public struct hkMatrix3f
 	[FieldOffset(0x28)] public float M22;
 	[FieldOffset(0x2C)] public float pad3;
 	
-	[FieldOffset(0x00)] public hkVector4f Column0;
-	[FieldOffset(0x10)] public hkVector4f Column1;
-	[FieldOffset(0x20)] public hkVector4f Column2;
+	[FieldOffset(0x00)] [IDAIgnore] public hkVector4f Column0;
+	[FieldOffset(0x10)] [IDAIgnore] public hkVector4f Column1;
+	[FieldOffset(0x20)] [IDAIgnore] public hkVector4f Column2;
 }
