@@ -50,7 +50,7 @@ public unsafe partial struct AtkEvent
     [FieldOffset(0x20)] public AtkEvent* NextEvent;
     [FieldOffset(0x28)] public AtkEventType Type;
     [FieldOffset(0x29)] public byte Unk29;
-    [FieldOffset(0x30)] public byte Flags; // 0: handled, 5: force handled (see AtkEvent::SetEventIsHandled)
+    [FieldOffset(0x2A)] public byte Flags; // 0: handled, 5: force handled (see AtkEvent::SetEventIsHandled)
   
     [MemberFunction("E8 ?? ?? ?? ?? 8D 53 9C")]
     public partial void SetEventIsHandled(bool forced = false);
