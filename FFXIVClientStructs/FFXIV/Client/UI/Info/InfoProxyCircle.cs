@@ -36,7 +36,7 @@ public unsafe partial struct InfoProxyCircle
     [FieldOffset(0x0758)] public Utf8String UnkString0758;
 
     [FixedSizeArray<Unk1>(100)]
-    [FieldOffset(0x0A98)] public fixed byte Unk1Arr[100 * 0xF0];//5DC0
+    [FieldOffset(0x0A90)] public fixed byte Unk1Arr[100 * 0xF0];//5DC0
 
     [FieldOffset(0x6850)] public void* UnkObj6850;
     [FieldOffset(0x6878)] public Utf8String UnkString6878;
@@ -64,9 +64,10 @@ public unsafe partial struct InfoProxyCircle
     [StructLayout(LayoutKind.Explicit, Size = 0xF0)]
     public struct Unk1
     {
-        [FieldOffset(0x00)] public Utf8String String0;
-        //0x10 bytes
-        [FieldOffset(0x80)] public Utf8String String1;
         //0x08 bytes
+        [FieldOffset(0x08)] public Utf8String String0;
+        //0x08 bytes
+        [FieldOffset(0x78)] public Utf8String String1;
+        //0x10 bytes
     }
 }
