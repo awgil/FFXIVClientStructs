@@ -23,8 +23,9 @@ public unsafe partial struct AgentContentsFinder
     [FieldOffset(0x5C8)] public ContentsFinderRewards Reward2;
     [FieldOffset(0x810)] public ContentsFinderRewards BonusReward2;
 
-    [FixedSizeArray<ItemReward>(35)] 
-    [FieldOffset(0x890)] public fixed byte ItemRewardArray[0x130 * 35];
+    // note: this is part of a substructure 0x4A8; starting from 0x3F0 it contains 3 arrays of 5 elements
+    [FixedSizeArray<ItemReward>(15)]
+    [FieldOffset(0x898)] public fixed byte ItemRewardArray[0x130 * 15];
     
     [FieldOffset(0x1B4C)] public int SelectedDutyId; // ContentFinderCondition rowId for duties, ContentRoulette rowId for roulette
     [FieldOffset(0x1B58)] public byte NumCollectedRewards; // Value used for "Reward already received"
@@ -64,10 +65,10 @@ public struct ContentsFinderRewards
 [StructLayout(LayoutKind.Explicit, Size = 0x130)]
 public struct ItemReward
 {
-    [FieldOffset(0x44)] public int ItemId;
-    [FieldOffset(0x48)] public int Quantity;
-    [FieldOffset(0x58)] public Utf8String TooltipString;
-    [FieldOffset(0x78)] public Utf8String UnkString; // This string seems to be unused?
+    [FieldOffset(0x3C)] public int ItemId;
+    [FieldOffset(0x40)] public int Quantity;
+    [FieldOffset(0x50)] public Utf8String TooltipString;
+    [FieldOffset(0xC0)] public Utf8String UnkString; // This string seems to be unused?
 }
 
 public enum ContentsRouletteRole : byte {
