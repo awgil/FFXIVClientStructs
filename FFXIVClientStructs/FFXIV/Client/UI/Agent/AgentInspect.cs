@@ -7,7 +7,7 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 namespace FFXIVClientStructs.FFXIV.Client.UI.Agent;
 
 [Agent(AgentId.Inspect)]
-[StructLayout(LayoutKind.Explicit, Size = 0x554)]
+[StructLayout(LayoutKind.Explicit, Size = 0x820)]
 public unsafe partial struct AgentInspect
 {
     //Notes to INfoProxies:

@@ -5,7 +5,7 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 namespace FFXIVClientStructs.FFXIV.Client.UI.Agent
 {
     [Agent(AgentId.FreeCompanyProfile)]
-    [StructLayout(LayoutKind.Explicit, Size = 0x27C)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x280)]
     public unsafe partial struct AgentFreeCompanyProfile
     {
         public static AgentFreeCompanyProfile* Instance() =>
