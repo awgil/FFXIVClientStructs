@@ -22,8 +22,6 @@ globals:
 #fail   0x1421057B8: g_Client::Game::UI::Buddy.Pet.BuffList # not a pointer
   0x142102400: g_Client::Game::UI::Buddy.CompanionStats.TimeRemaining  # not a pointer
   0x142102450: g_Client::Game::UI::Buddy.BattleBuddyListPtr # Member of UIState
-  0x142102500: g_Client::Game::UI::ContentsNote
-  0x1421025A8: g_Client::Game::UI::RelicNote # not a pointer
   # 0x14210E810: g_TitleController # commented out because it no longer has an xref
   0x14210E818: g_TitleList
   0x1421115B0: g_Client::Game::UI::ContentsFinder::LootRules
@@ -792,11 +790,17 @@ classes:
   Client::Game::UI::ContentsNote:
     vtbls:
       - ea: 0x141999B88
+    instances:
+      - ea: 0x142102500
+        pointer: False
     funcs:
       0x140955E50: IsCategoryUnlocked
   Client::Game::UI::RelicNote:
     vtbls:
       - ea: 0x141999B90
+    instances:
+      - ea: 0x1421025A8
+        pointer: False
     funcs:
       0x1409566E0: GetRelicID
       0x1409566F0: GetRelicNoteID
