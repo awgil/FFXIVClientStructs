@@ -1,6 +1,6 @@
 ﻿namespace FFXIVClientStructs.FFXIV.Client.Game; 
 
-[StructLayout(LayoutKind.Explicit, Size = 0x58D0)]
+[StructLayout(LayoutKind.Explicit, Size = 0x4068)]
 public unsafe partial struct GameMain
 {
 	[FieldOffset(0x0)] public fixed uint ActiveFestivals[4];
