@@ -7,7 +7,7 @@ namespace FFXIVClientStructs.FFXIV.Client.Game;
 [StructLayout(LayoutKind.Explicit, Size = 0xF00)]
 public unsafe partial struct QuestManager
 {
-	[FieldOffset(0x10)] public QuestListArray Quest;
+	[FieldOffset(0x10)] [Obsolete("Use NormalQuests instead")] public QuestListArray Quest;
 
 	[FixedSizeArray<QuestWork>(30)]
 	[FieldOffset(0x10)] public fixed byte NormalQuests[0x18 * 30];
@@ -133,7 +133,8 @@ public unsafe partial struct QuestManager
 	    if (index >= span.Length) return null; 
 	    return (BeastReputationWork*)Unsafe.AsPointer(ref span[(int)index]);
     }
-    
+
+    [Obsolete("Use NormalQuests instead")]
     [StructLayout(LayoutKind.Explicit)]
     public struct QuestListArray
     {
@@ -152,6 +153,7 @@ public unsafe partial struct QuestManager
             }
         }
 
+        [Obsolete("Use QuestWork instead")]
         [StructLayout(LayoutKind.Explicit, Size = 0x18)]
         public struct Quest
         {
@@ -160,6 +162,7 @@ public unsafe partial struct QuestManager
 
             public bool IsHidden => Flags.HasFlag(QuestFlags.Hidden);
 
+            [Obsolete("See QuestWork")]
             [Flags]
             public enum QuestFlags : byte
             {

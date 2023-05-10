@@ -10,7 +10,7 @@ public unsafe partial struct AtkStage
 {
     [FieldOffset(0x0)] public AtkEventTarget AtkEventTarget;
     [FieldOffset(0x20)] public RaptureAtkUnitManager* RaptureAtkUnitManager;
-    [FieldOffset(0x20)] public nint AtkInputManager;
+    [FieldOffset(0x20)] [Obsolete("Use RaptureAtkUnitManager instead")] public nint AtkInputManager;
     [FieldOffset(0x38)] public AtkArrayDataHolder* AtkArrayDataHolder;
     [FieldOffset(0x78)] public AtkDragDropManager DragDropManager;
     [FieldOffset(0x168)] public AtkTooltipManager TooltipManager;

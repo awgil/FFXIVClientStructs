@@ -66,7 +66,7 @@ public unsafe partial struct Character
     [FieldOffset(0x1AF4)] public ushort CurrentWorld;
     [FieldOffset(0x1AF6)] public ushort HomeWorld;
     [FieldOffset(0x1AF8)] public ushort TitleID;
-    [FieldOffset(0x1B00)] public byte EventState; // Leave for backwards compat. See Mode.
+    [FieldOffset(0x1B00)] [Obsolete("Leave for backwards compat. See Mode.")] public byte EventState;
     [FieldOffset(0x1B00)] public CharacterModes Mode;
     [FieldOffset(0x1B01)] public byte ModeParam; // Different purpose depending on mode. See CharacterModes for more info.
     [FieldOffset(0x1B02)] public byte OnlineStatus;

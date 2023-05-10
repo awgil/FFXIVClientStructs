@@ -33,7 +33,7 @@ public unsafe partial struct ResourceGraph
         [FixedSizeArray<Pointer<CategoryMap>>(0x14)]
         [FieldOffset(0x0)] public fixed byte CategoryMaps[0x8 * 0x14];
 
-        [FieldOffset(0x0)] public CategoryMap* MainMap;
+        [FieldOffset(0x0)] [IDAIgnore] public CategoryMap* MainMap;
     }
 
     [FixedSizeArray<CategoryContainer>(0x14)]
