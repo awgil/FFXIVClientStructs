@@ -25,7 +25,7 @@ public unsafe partial struct MJIPastureHandler {
     /// This array is indexed by an internal ID and does not appear to be grouped by location or similar.
     /// </summary>
     [FixedSizeArray<MJIMinionSlot>(40)] 
-    [FieldOffset(0x8B8)] public fixed byte MinionSlots[40 * MJIMinionSlot.Size];
+    [FieldOffset(0x8D8)] public fixed byte MinionSlots[40 * MJIMinionSlot.Size];
 
     /// <summary>
     /// Gets the current number of minions roaming the Island Sanctuary.
