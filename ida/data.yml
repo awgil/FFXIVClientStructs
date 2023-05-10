@@ -455,7 +455,7 @@ classes:
       0x140799240: CreateCharacterAtIndex
       0x140799390: DeleteCharacterAtIndex
       0x140799430: DeleteAllCharacters
-      0x140799520: LookupBattleCharaByObjectID
+      0x140799520: LookupBattleCharaByObjectId
       0x140799580: LookupBattleCharaByName
       0x140799670: LookupRetainerByName
       0x140799710: LookupBuddyByOwnerObject
@@ -884,9 +884,9 @@ classes:
       0x14099C000: GetAdjustedActionId
       0x14099E020: UseAction
       0x14099E890: UseComboAction
-      0x14099F1B0: GetRecastTimerActive
+      0x14099F1B0: IsRecastTimerActive
       0x14099F540: StartCooldown
-      0x14099F8F0: GetRecastTimerElapsed
+      0x14099F8F0: GetRecastTimeElapsed
       0x14099F9A0: GetRecastTime
       0x14099FAB0: UpdateRecastFromNetwork
       0x14099FAF0: AssignBlueMageActionToSlot
@@ -2653,6 +2653,7 @@ classes:
   Client::Game::Control::TargetSystem:
     instances:
       - ea: 0x1420CB380
+        pointer: False
     vtbls:
       - ea: 0x141930680
         base: Client::Game::Object::IGameObjectEventListener
@@ -2684,6 +2685,7 @@ classes:
   Client::Game::Control::Control:
     instances:
       - ea: 0x1420CB200
+        pointer: False
     funcs:
       0x1404E51E0: Initialize
       0x1404E5450: Update
