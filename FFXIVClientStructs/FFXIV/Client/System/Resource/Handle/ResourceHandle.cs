@@ -25,3 +25,9 @@ public unsafe partial struct ResourceHandle {
     [MemberFunction("E8 ?? ?? ?? ?? 41 8B 46 30 C1 E0 05")]
     public partial bool IncRef();
 }
+
+[StructLayout(LayoutKind.Explicit, Size = 0xC0)]
+public unsafe partial struct DefaultResourceHandle
+{
+    [FieldOffset(0x00)] public ResourceHandle ResourceHandle;
+}

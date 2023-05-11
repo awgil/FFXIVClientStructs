@@ -7,7 +7,7 @@
 [StructLayout(LayoutKind.Explicit, Size = 0x108)]
 public unsafe partial struct MaterialResourceHandle
 {
-    [FieldOffset(0x0)] public ResourceHandle ResourceHandle;
+    [FieldOffset(0x0)] public DefaultResourceHandle DefaultResourceHandle;
 
     [MemberFunction("4C 8B DC 49 89 5B ?? 49 89 73 ?? 55 57 41 55")]
     public partial byte LoadTexFiles();
