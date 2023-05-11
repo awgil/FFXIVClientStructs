@@ -526,7 +526,7 @@ classes:
   BattleBuddyList:
     funcs:
       0x14094B190: GetMemberBattleCharaByIndex
-  QuestManager:
+  Client::Game::QuestManager:
     instances:
       - ea: 0x1420F59C0
         pointer: False
@@ -541,7 +541,7 @@ classes:
       0x14082A4F0: GetBeastTribeAllowance
       0x14086AD30: IsLevequestComplete
       0x1409111B0: GetNextLeveAllowancesTimestamp # multiply by 60 for unix timestamp
-  InventoryManager:
+  Client::Game::InventoryManager:
     instances:
       - ea: 0x1420F2310
         pointer: False
@@ -582,7 +582,7 @@ classes:
       0x140B39AE0: GetSubmarineVoyageTime # (unsigned __int8 pointA, unsigned __int8 pointB, __int16 speed) -> VoyageTime (return is time in seconds)
       0x140B2BEC0: GetAirshipVoyageTimeAndDistance # (unsigned __int8 pointA, unsigned __int8 pointB, __int16 speed, _DWORD *voyageTime, int *voyageDistance)
       0x140B2BFE0: GetAirshipSurveyDuration # (unsigned __int8 point, __int16 speed) -> SurveyDuration (return is time in seconds)
-  InventoryContainer:
+  Client::Game::InventoryContainer:
     funcs:
       0x1406F6270: GetInventorySlot  # (this, slotIndex)
   Client::Game::MJI::MJIManager:  # Island Sanctuary
@@ -671,7 +671,7 @@ classes:
       0x14051DF90: SetDuplicateNodeInfo
       0x14051E270: ExpandNodeListSize
       0x14051E8D0: DuplicateComponentNode
-      0x14051E410: SeardNodeById
+      0x14051E410: SearchNodeById
       0x14051E470: SearchNodeByIndex 
       0x14051E4E0: GetDuplicatedNode
   Component::GUI::AtkArrayDataHolder:
@@ -2794,6 +2794,7 @@ classes:
   Component::GUI::AtkStage:
     instances:
       - ea: 0x1420D0CC0
+        pointer: True
     vtbls:
       - ea: 0x141932E48
         base: Component::GUI::AtkEventTarget # This doesn't look right...'
@@ -2832,17 +2833,17 @@ classes:
       0x140511530: GetAsAtkComponentNode
       0x140511550: GetComponent
       0x140537AB0: GetComponent_2
-      0x14053A190: GetAsComponentButton
-      0x140549630: GetAsComponentList
-      0x140555630: GetAsComponentCheckBox
-      0x140563FE0: GetAsComponentDropDownList
-      0x140564790: GetAsComponentRadioButton
-      0x14056EE80: GetAsComponentScrollBar
-      0x1405659B0: GetAsTextNineGridComponent
-      0x14057A890: GetAsJournalCanvas
-      0x14057D000: GetAsHoldButton
-      0x140511D00: RegisterEvent
-      0x140511D40: UnregisterEvent
+      0x14053A190: GetAsAtkComponentButton
+      0x140549630: GetAsAtkComponentList
+      0x140555630: GetAsAtkComponentCheckBox
+      0x140563FE0: GetAsAtkComponentDropdownList
+      0x140564790: GetAsAtkComponentRadioButton
+      0x14056EE80: GetAsAtkComponentScrollBar
+      0x1405659B0: GetAsAtkTextNineGrid
+      0x14057A890: GetAsAtkJournalCanvas
+      0x14057D000: GetAsAtkHoldButton
+      0x140511D00: AddEvent
+      0x140511D40: RemoveEvent
       0x140511D80: DispatchEvent
       0x1405120F0: GetPositionFloat
       0x140512110: SetPositionFloat
@@ -2873,8 +2874,8 @@ classes:
       0x140512AF0: SetPriority
       0x140512B10: IsVisible
       0x140512B40: SetVisibility
-      0x140512F20: GetIsUsingDepthBasedDrawPriority
-      0x140512F40: SetUseDepthBasedDrawPriority
+      0x140512F20: IsUsingDepthBasedPriority
+      0x140512F40: SetUseDepthBasedPriority
       0x140512F90: SetDepth
       0x140513360: Init
       0x140513530: SetScale0  # SetScale jumps to this
@@ -2960,7 +2961,7 @@ classes:
       42: Draw
       44: LoadUldResourceHandle
       47: OnSetup
-      49: OnRefresh
+      49: OnUpdate
       50: OnRequestedUpdate
       60: OnMouseOver
       61: OnMouseOut
@@ -2998,7 +2999,7 @@ classes:
     funcs:
       0x140537830: ctor
       0x140537AE0: GetOwnerNodePosition
-      0x140537E10: GetScrollBarById
+      0x140537E10: GetScrollBarNodeById
       0x140537F10: GetTextNodeById
       0x140537F70: GetImageNodeById
   Component::GUI::AtkComponentButton:

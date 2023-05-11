@@ -220,7 +220,7 @@ public unsafe partial struct AtkResNode : ICreatable
     public partial void SetHeight(ushort height);
 
     [MemberFunction("E8 ?? ?? ?? ?? 48 83 C7 08 48 83 EB 01 75 DC")]
-    public partial void ToggleVisibility(bool enable);
+    public partial void SetVisibility(bool enable);
 
     [MemberFunction("E8 ?? ?? ?? ?? 66 85 C0 75 48")]
     public partial ushort GetPriority();
