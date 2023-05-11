@@ -686,6 +686,7 @@ classes:
   Client::System::Resource::ResourceManager:
     instances:
       - ea: 0x1420B0ED0
+        pointer: True
     funcs:
       0x1401CC610: ctor
       0x1401CCB00: CreateSingleton
@@ -2648,6 +2649,7 @@ classes:
       0x1404B6A20: ctor
     instances:
       - ea: 0x1420C6F20
+        pointer: True
   Client::Graphics::Vfx::VfxData:
     vtbls:
       - ea: 0x1419224D0
@@ -6842,6 +6844,7 @@ classes:
       0x1412EBBC0: ctor
     instances:
       - ea: 0x14212C360
+        pointer: True
   Client::System::Scheduler::ActionTimelineManager:
     vtbls:
       - ea: 0x141A81DF8
@@ -6850,6 +6853,7 @@ classes:
       0x1412E1920: ctor
     instances:
       - ea: 0x14212A1E0
+        pointer: True
   Client::System::Scheduler::TimelineGroup:
     funcs:
       0x1413569C0: PlayAction
@@ -6872,6 +6876,7 @@ classes:
   Client::System::Scheduler::Resource::SchedulerResourceManagement:
     instances:
       - ea: 0x14212C3B0
+        pointer: True
     vtbls:
       - ea: 0x141A886C0
     funcs:
