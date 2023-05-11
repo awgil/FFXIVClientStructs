@@ -50,7 +50,7 @@ public unsafe partial struct Camera
     }
 
     public bool WorldToScreen(Vector3 worldPos, out Vector2 screenPos) {
-	    var device = Device.Instance();
+	    var device = DeviceDX11.Instance();
 	    float width = device->Width;
 	    float height = device->Height;
         var pCoords = Vector3.Transform(worldPos, ViewMatrix * RenderCamera->ProjectionMatrix);

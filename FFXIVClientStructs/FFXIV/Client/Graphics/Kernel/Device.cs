@@ -5,7 +5,7 @@
 
 // Client::Graphics::Kernel::DeviceDX11
 [StructLayout(LayoutKind.Explicit, Size = 0x258)]
-public unsafe partial struct Device
+public unsafe partial struct DeviceDX11
 {
     [FieldOffset(0x8)] public void* ContextArray; // Client::Graphics::Kernel::Context array
     [FieldOffset(0x10)] public void* RenderThread; // Client::Graphics::Kernel::RenderThread
@@ -27,5 +27,5 @@ public unsafe partial struct Device
     [FieldOffset(0x250)] public void* ImmediateContext; // Client::Graphics::Kernel::Device::ImmediateContext
 
     [StaticAddress("48 8B 0D ?? ?? ?? ?? 48 8D 54 24 ?? F3 0F 10 44 24", 3, isPointer: true)]
-    public static partial Device* Instance();
+    public static partial DeviceDX11* Instance();
 }
