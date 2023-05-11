@@ -2,7 +2,7 @@
 
 [StructLayout(LayoutKind.Explicit, Size = 0x10)]
 public struct EventSceneModuleUsualImpl {
-	[FieldOffset(0x00)] public EventSceneModuleImplBase ImplBase;
+	[FieldOffset(0x00)] [IDABaseClass] public EventSceneModuleImplBase ImplBase;
 }
 
 [StructLayout(LayoutKind.Explicit, Size = 0x10)]

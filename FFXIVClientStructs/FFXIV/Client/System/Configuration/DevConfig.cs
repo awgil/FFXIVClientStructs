@@ -9,5 +9,5 @@
 [StructLayout(LayoutKind.Explicit, Size = 0x110)]
 public struct DevConfig
 {
-    [FieldOffset(0x0)] public Common.Configuration.DevConfig CommonDevConfig;
+    [FieldOffset(0x0)] [IDABaseClass] public Common.Configuration.DevConfig CommonDevConfig;
 }

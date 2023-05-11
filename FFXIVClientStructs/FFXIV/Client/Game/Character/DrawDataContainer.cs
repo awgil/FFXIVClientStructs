@@ -4,7 +4,7 @@
 [StructLayout(LayoutKind.Explicit, Size = 0x190)]
 public unsafe partial struct DrawDataContainer
 {
-    [FieldOffset(0x000)] public void** Vtable;
+    [FieldOffset(0x000)] public void** VTable;
     [FieldOffset(0x008)] public void*  Unk8;
 
     [FieldOffset(0x010)] public WeaponModelId  MainHandModel;

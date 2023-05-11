@@ -3,7 +3,7 @@
 [StructLayout(LayoutKind.Explicit, Size=0x10)]
 public unsafe partial struct hkResource
 {
-	[FieldOffset(0x0)] public hkReferencedObject HkReferencedObject;
+	[FieldOffset(0x0)] [IDABaseClass] public hkReferencedObject HkReferencedObject;
 
 	[VirtualFunction(7)]
 	[GenerateCStrOverloads]

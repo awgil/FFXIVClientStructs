@@ -65,7 +65,7 @@ public unsafe partial struct Manager
         Hud
     }
 
-    [FieldOffset(0x0)] public void* Vtbl;
+    [FieldOffset(0x0)] public void* VTable;
     [FixedSizeArray<View>(32)]
     [FieldOffset(0x8)] public fixed byte ViewArray[0x5A0 * 0x20]; // 32 Client::Graphics::Render::View
 }

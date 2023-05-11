@@ -5,7 +5,7 @@ namespace FFXIVClientStructs.FFXIV.Client.UI;
 [Addon("_ActionDoubleCrossL", "_ActionDoubleCrossR")]
 [StructLayout(LayoutKind.Explicit, Size = 0x2F8)]
 public struct AddonActionDoubleCrossBase {
-    [FieldOffset(0x000)] public AddonActionBarBase ActionBarBase;
+    [FieldOffset(0x000)] [IDABaseClass] public AddonActionBarBase ActionBarBase;
 
     /// <summary>
     /// Set to 1 when the WXHB is showing the directional pad inputs as well as the action button inputs.
