@@ -6,7 +6,7 @@ namespace FFXIVClientStructs.FFXIV.Client.UI;
 [StructLayout(LayoutKind.Explicit, Size = 0x290)]
 public unsafe struct AddonImage
 {
-    [FieldOffset(0x00)] public AtkUnitBase AtkUnitBase;
+    [FieldOffset(0x00)] public AddonScreenInfoChild AddonScreenInfoChild;
 
     [FieldOffset(0x260)] public AtkResNode* ResNode1; // Both AtkResNode's appear to be the same node
     [FieldOffset(0x268)] public AtkResNode* ResNode2;
@@ -14,4 +14,11 @@ public unsafe struct AddonImage
     
     [FieldOffset(0x27C)] public ushort Width;
     [FieldOffset(0x280)] public ushort Height;
+}
+
+// intermediate class in the hierarchy
+[StructLayout(LayoutKind.Explicit, Size = 0x238)]
+public unsafe struct AddonScreenInfoChild
+{
+    [FieldOffset(0x0)] public AtkUnitBase AtkUnitBase;
 }

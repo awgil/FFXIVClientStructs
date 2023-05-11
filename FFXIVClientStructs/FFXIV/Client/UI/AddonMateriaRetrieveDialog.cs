@@ -9,5 +9,12 @@ namespace FFXIVClientStructs.FFXIV.Client.UI;
 [StructLayout(LayoutKind.Explicit, Size = 0x220)]
 public struct AddonMateriaRetrieveDialog
 {
+    [FieldOffset(0x0)] public AddonMateriaDialogBase AddonMateriaDialogBase;
+}
+
+// intermediate class in the hierarchy
+[StructLayout(LayoutKind.Explicit, Size = 0x220)]
+public struct AddonMateriaDialogBase
+{
     [FieldOffset(0x0)] public AtkUnitBase AtkUnitBase;
 }
