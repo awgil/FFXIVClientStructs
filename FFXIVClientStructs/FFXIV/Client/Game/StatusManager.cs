@@ -19,13 +19,13 @@ public unsafe partial struct StatusManager
     public partial int GetStatusIndex(uint statusId, uint sourceId = 0xE0000000);
 
     [MemberFunction("83 FA 1E 72 04 0F 57 C0")]
-    public partial float GetRemainingTime(int statusIndex);
+    public partial float GetRemainingTimeByIndex(int statusIndex);
 
     [MemberFunction("E8 ?? ?? ?? ?? 3D ?? ?? ?? ?? 74 45")]
-    public partial uint GetStatusId(int statusIndex);
+    public partial uint GetStatusIdByIndex(int statusIndex);
 
     [MemberFunction("E8 ?? ?? ?? ?? 3B 44 24 28")]
-    public partial uint GetSourceId(int statusIndex);
+    public partial uint GetSourceIdByIndex(int statusIndex);
 
     [MemberFunction("E8 ?? ?? ?? ?? 49 8B CE E8 ?? ?? ?? ?? 84 C0 74 4E")]
     public partial void AddStatus(ushort statusId, ushort param = 0, void* u3 = null);

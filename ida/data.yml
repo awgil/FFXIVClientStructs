@@ -74,7 +74,7 @@ functions:
   0x1404ECFE0: Client::System::Input::InputData_IsInputIDKeyPress
   0x1404ED0F0: Client::System::Input::InputData_IsInputIDClicked
   0x1404EDA30: Client::System::Input::InputData_IsMouseCombinationDragged
-  0x1404F7AE0: Component::GUI::AtkCursor_SetCursorType # the cursor's icon I believe
+  0x1404F7AE0: Component::GUI::AtkCursor.SetCursorType # the cursor's icon I believe
   0x1404F6D90: RemoveFromList # (AtkEvent**, AtkEvent*) Finds and removes param2 from the param1 list
   0x1405203C0: GetScaleListEntryFromScale
   0x14052EB70: GetScaleForListOption
@@ -92,7 +92,7 @@ functions:
   0x1411869E0: Client::UI::AddonHudLayoutScreen::MoveableAddonInfoStruct_UpdateAddonPosition
   0x14125DD60: Client::Graphics::Kernel::CreateShader # static function
   0x14126A260: NormalizeCustomizeData
-  0x14129ADC0: Client::Game::Control::InputManager::IsAutoRunning # static function, might belong in a different class.
+  0x14129ADC0: Client::Game::Control::InputManager.IsAutoRunning # static function, might belong in a different class.
   0x1412FE680: lua_close
   0x1412FE700: lua_newstate
   0x1412FEA00: lua_index2addr
@@ -592,7 +592,7 @@ classes:
     funcs:
       0x140B713B0: Initialize # static
       0x140B71400: Destroy    # static
-      0x140B71440: GetSingleton  # static
+      0x140B71440: GetInstance  # static
       0x140B742C0: ctor
       0x140B74520: dtor
       0x140B73300: LoadDemandResearchPacket
@@ -1149,9 +1149,9 @@ classes:
     funcs:
       0x1404AF460: ctor
       0x1404AF590: Initialize
-      0x1404AFA30: Raycast
-      0x141283070: Raycast1 # not sure where else to put those two for now
-      0x1412830C0: Raycast2
+      0x1404AFA30: RaycastEx
+      0x141283070: Raycast2 # not sure where else to put those two for now
+      0x1412830C0: Raycast 
   Common::Component::BGCollision::Object:
     vtbls:
       - ea: 0x14192ECA8
@@ -3301,14 +3301,14 @@ classes:
         base: Client::UI::Misc::UserFileManager::UserFileEvent
     funcs:
       0x1405FDE40: ctor
-  Client::UI::RaptureUiDataModule:
+  Client::UI::Misc::RaptureUiDataModule:
     vtbls:
       - ea: 0x141942B08
         base: Client::UI::Misc::UserFileManager::UserFileEvent
     funcs:
       0x1406163A0: ctor
       0x140696C40: ctor_FromUserFileManager
-      0x14069B0D0: MjiCreateWorkshopPreset
+      0x14069B0D0: MJI_SetWorkshopPreset
   Client::UI::UI3DModule::MapInfo:
     vtbls:
       - ea: 0x141942BE0
@@ -3606,8 +3606,8 @@ classes:
   Client::UI::Misc::RecommendEquipModule:
     funcs:
       0x14069C410: ctor
-      0x14069C830: SetupRecommendationList
-      0x14069C9D0: EquipRecommended
+      0x14069C830: SetupRecommendedGear
+      0x14069C9D0: EquipRecommendedGear
   Client::UI::Misc::RetainerCommentModule:
     vtbls:
       - ea: 0x141949A30

@@ -55,19 +55,19 @@ public unsafe partial struct PvPProfile
 
     /// <summary>Gets the current PvP rank for the active Grand Company.</summary>
     [MemberFunction("E8 ?? ?? ?? ?? 3A 46 4F")]
-    public partial byte GetPvPRank();
+    public partial byte GetRank();
 
     /// <summary>Gets the total accumulated PvP experience for the active Grand Company.</summary>
     [MemberFunction("0F B6 15 ?? ?? ?? ?? 8D 42 FF 3C 02 77 0F")]
-    public partial uint GetPvPTotalExperience();
+    public partial uint GetTotalExperience();
 
     /// <summary>Gets the experience for the current PvP rank for the active Grand Company.</summary>
     [MemberFunction("E8 ?? ?? ?? ?? 49 8B CC 8B F0")]
-    public partial uint GetPvPCurrentRankExperience();
+    public partial uint GetCurrentRankExperience();
 
     /// <summary>Gets the needed experience for the current PvP rank for the active Grand Company.</summary>
     [MemberFunction("0F B6 15 ?? ?? ?? ?? 8D 42 FF 3C 02 77 07")]
-    public partial uint GetPvPCurrentRankNeededExperience();
+    public partial uint GetCurrentRankNeededExperience();
 
     /// <summary>Gets the current PvP Series rank.</summary>
     [MemberFunction("E8 ?? ?? ?? ?? 0F B6 F0 8B FE")]

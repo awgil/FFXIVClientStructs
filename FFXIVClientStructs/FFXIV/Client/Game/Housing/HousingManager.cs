@@ -4,7 +4,7 @@
 public unsafe partial struct HousingManager
 {
     [MemberFunction("E8 ?? ?? ?? ?? 8B 56 7C")]
-    public static partial HousingManager* Instance();
+    public static partial HousingManager* GetInstance();
 
     [FieldOffset(0x00)] public HousingTerritory* CurrentTerritory;
     [FieldOffset(0x08)] public HousingTerritory* OutdoorTerritory;

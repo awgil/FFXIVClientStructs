@@ -132,7 +132,7 @@ public unsafe partial struct MJIManager {
     /// </summary>
     /// <returns>Returns a pointer to the game's IslandSanctuaryManager instance.</returns>
     [MemberFunction("E8 ?? ?? ?? ?? 8B 50 10")]
-    public static partial MJIManager* Instance();
+    public static partial MJIManager* GetInstance();
 
     /// <summary>
     /// Check if a specific MJIRecipe is *unlocked*. Does not care if the item has been crafted.
