@@ -5,7 +5,7 @@
 // size = 0x9C88
 // ctor E8 ?? ?? ?? ?? C6 83 ?? ?? ?? ?? ?? 48 8D 8B ?? ?? ?? ?? 48 8D 05 ?? ?? ?? ?? 
 [StructLayout(LayoutKind.Explicit, Size = 0x9C88)]
-public struct AtkUnitManager
+public unsafe partial struct AtkUnitManager
 {
     [FieldOffset(0x0)] public AtkEventListener AtkEventListener;
     [FieldOffset(0x30)] public AtkUnitList DepthLayerOneList;
@@ -27,6 +27,13 @@ public struct AtkUnitManager
     [FieldOffset(0x8130)] public AtkUnitList UnitList17;
     [FieldOffset(0x8940)] public AtkUnitList UnitList18;
     [FieldOffset(0x9C80)] public AtkUnitManagerFlags Flags;
+
+    [MemberFunction("E8 ?? ?? ?? ?? 48 8B F8 41 B0 01")]
+    [GenerateCStrOverloads]
+    public partial AtkUnitBase* GetAddonByName(byte* name, int index = 1);
+
+    [MemberFunction("E8 ?? ?? ?? ?? 8B 6B 20")]
+    public partial AtkUnitBase* GetAddonById(ushort id);
 }
 
 [Flags]
