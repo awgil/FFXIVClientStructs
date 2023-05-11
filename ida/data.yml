@@ -578,7 +578,7 @@ classes:
       0x140B38570: IsSubmarineExplorationUnlocked # static
       0x140B385B0: IsSubmarineExplorationExplored # static
       0x140B38610: GetSubmarineSurveyDuration # (unsigned __int8 point, __int16 speed) -> SurveyDuration (return is time in seconds)
-      0x140B39C80: GetSubmarineVoyageDistance # (unsigned __int8 point, unsigned __int8 speed) -> VoyageDistance (return is integer)
+      0x140B39C80: GetSubmarineVoyageDistanceImpl # (unsigned __int8 point, unsigned __int8 speed) -> VoyageDistance (return is integer)
       0x140B39AE0: GetSubmarineVoyageTime # (unsigned __int8 pointA, unsigned __int8 pointB, __int16 speed) -> VoyageTime (return is time in seconds)
       0x140B2BEC0: GetAirshipVoyageTimeAndDistance # (unsigned __int8 pointA, unsigned __int8 pointB, __int16 speed, _DWORD *voyageTime, int *voyageDistance)
       0x140B2BFE0: GetAirshipSurveyDuration # (unsigned __int8 point, __int16 speed) -> SurveyDuration (return is time in seconds)
@@ -996,7 +996,7 @@ classes:
     funcs:
       0x140068870: SetValueUInt
       0x140068910: SetValueFloat
-      0x140069C70: SetValueString # Destroys Utf8String
+      0x140068990: SetValueString # Destroys Utf8String
   Common::Configuration::ConfigBase:
     vtbls:
       - ea: 0x1418DF040
