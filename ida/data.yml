@@ -723,7 +723,7 @@ classes:
       0x140913EF0: IsOrnamentUnlocked
       0x140912960: IsOrchestrionRollUnlocked
       0x140911B20: IsSecretRecipeBookUnlocked # DoH unlockable books
-      0x1409128A0: IsFolkloreTomeUnlocked     # DoL unlockable books
+      0x1409128A0: IsFolkloreBookUnlocked     # DoL unlockable books
       0x140913CF0: IsMcGuffinUnlocked
       0x140913FF0: IsFramersKitUnlocked
       0x140912D90: GetWeeklyBingoFlagsValue
@@ -732,7 +732,7 @@ classes:
       0x140912D50: IsWeeklyBingoStickerPlaced
       0x140912D70: GetWeeklyBingoTaskStatus
       0x140912FB0: GetWeeklyBingoExpMultiplier
-      0x140911970: IsNoviceNetworkFlagSet
+      0x140911970: IsPlayerStateFlagSet
       0x1409119B0: IsNovice
       0x1409119D0: IsReturner
       0x140911A30: IsMentor
@@ -827,8 +827,8 @@ classes:
         pointer: False
     funcs:
       0x140961DC0: GetKillCount
-      0x140961D00: GetObtainedMobHuntOrderRowId
-      0x140961C90: GetAvailableMobHuntOrderRowId
+      0x140961D00: GetObtainedHuntOrderRowId
+      0x140961C90: GetAvailableHuntOrderRowId
       0x140962530: GetMarkIndexFromItemId
       0x140962580: IsMarkBillUnlocked
   Client::Game::UI::RouletteController:
@@ -1656,6 +1656,7 @@ classes:
   Client::Graphics::Environment::EnvManager:
     instances:
       - ea: 0x1420A9FD8
+        pointer: True
     vtbls:
       - ea: 0x1419004B8
         base: Client::Graphics::Singleton
@@ -1747,6 +1748,7 @@ classes:
   Client::Graphics::Primitive::Manager:
     instances:
       - ea: 0x1420A9FA0
+        pointer: True
     vtbls:
       - ea: 0x141907C68
         base: Client::Graphics::Singleton
@@ -1768,6 +1770,7 @@ classes:
   Client::Graphics::AllocatorManager:
     instances:
       - ea: 0x1420A9F98
+        pointer: True
     vtbls:
       - ea: 0x1419081A8
         base: Client::Graphics::Singleton
@@ -2152,6 +2155,7 @@ classes:
   Client::Graphics::Render::Manager:
     instances:
       - ea: 0x1420A9FA8
+        pointer: True
     vtbls:
       - ea: 0x14191C1D8
         base: Client::Graphics::Singleton
@@ -2164,6 +2168,7 @@ classes:
   Client::Graphics::Render::ShadowManager:
     instances:
       - ea: 0x1420A9FB0
+        pointer: True
     vtbls:
       - ea: 0x14191C1F0
     funcs:
@@ -2182,6 +2187,7 @@ classes:
   Client::Graphics::Render::LightingManager:
     instances:
       - ea: 0x1420A9FB8
+        pointer: True
     vtbls:
       - ea: 0x14191C218
         base: Client::Graphics::Singleton
@@ -2192,6 +2198,7 @@ classes:
   Client::Graphics::Render::RenderTargetManager:
     instances:
       - ea: 0x1420A9FC0
+        pointer: True
     vtbls:
       - ea: 0x14191C240
         base: Client::Graphics::Singleton
@@ -2215,6 +2222,7 @@ classes:
   Client::Graphics::PostEffect::PostEffectManager:
     instances:
       - ea: 0x1420A9FD0
+        pointer: True
     vtbls:
       - ea: 0x14191EA08
         base: Client::Graphics::Singleton
@@ -2268,6 +2276,7 @@ classes:
   Client::Graphics::Scene::World:
     instances:
       - ea: 0x1420A9FE0
+        pointer: True
     vtbls:
       - ea: 0x14192C268
         base: Client::Graphics::Scene::Object
@@ -2293,6 +2302,7 @@ classes:
   Client::Graphics::Scene::CameraManager:
     instances:
       - ea: 0x1420A9FE8
+        pointer: True
     vtbls:
       - ea: 0x14192C308
         base: Client::Graphics::Singleton<Client::Graphics::Scene::CameraManager>
@@ -2301,6 +2311,7 @@ classes:
   Client::Graphics::Scene::CharacterUtility:
     instances:
       - ea: 0x1420A9FF0
+        pointer: True
     vtbls:
       - ea: 0x14192C4D0
         base: Client::Graphics::Singleton
@@ -2463,6 +2474,7 @@ classes:
   Client::Graphics::Scene::ResidentResourceManager:
     instances:
       - ea: 0x1420A9FF8
+        pointer: True
     vtbls:
       - ea: 0x14192DF48
         base: Client::Graphics::Singleton
@@ -6626,6 +6638,7 @@ classes:
   Client::Graphics::Culling::CullingManager:
     instances:
       - ea: 0x1420ABC08
+        pointer: True
     vtbls:
       - ea: 0x141A79070
         base: Client::Graphics::Singleton
@@ -6708,6 +6721,7 @@ classes:
   Client::Graphics::Culling::OcclusionCullingManager:
     instances:
       - ea: 0x1420C3120
+        pointer: True
     vtbls:
       - ea: 0x141A820E0
         base: Client::Graphics::Singleton
@@ -6721,6 +6735,7 @@ classes:
   Client::Graphics::Streaming::StreamingManager:
     instances:
       - ea: 0x1420A9FC8
+        pointer: True
     vtbls:
       - ea: 0x141A820F8
         base: Client::Graphics::Singleton
