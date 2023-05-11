@@ -10,7 +10,7 @@ namespace FFXIVClientStructs.FFXIV.Client.UI.Agent;
 public unsafe partial struct AgentDeepDungeonInspect
 {
     public static AgentDeepDungeonInspect* Instance() =>
-        (AgentDeepDungeonInspect*)Framework.Instance()->GetUiModule()->GetAgentModule()->GetAgentByInternalId(AgentId.DeepDungeonInspect);
+        (AgentDeepDungeonInspect*)Framework.Instance()->GetUIModule()->GetAgentModule()->GetAgentByInternalId(AgentId.DeepDungeonInspect);
 
     [FieldOffset(0x00)] public AgentInterface AgentInterface;
     [FieldOffset(0x28)] public AgentDeepDungeonInspectData* Data;

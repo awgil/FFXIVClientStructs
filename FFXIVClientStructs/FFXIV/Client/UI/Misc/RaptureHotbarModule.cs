@@ -10,7 +10,7 @@ namespace FFXIVClientStructs.FFXIV.Client.UI.Misc;
 [StructLayout(LayoutKind.Explicit, Size = 0x27278)]
 public unsafe partial struct RaptureHotbarModule
 {
-    public static RaptureHotbarModule* Instance() => Framework.Instance()->GetUiModule()->GetRaptureHotbarModule();
+    public static RaptureHotbarModule* Instance() => Framework.Instance()->GetUIModule()->GetRaptureHotbarModule();
 
     [FieldOffset(0)] public UserFileEvent UserFileEvent;
     [FieldOffset(0x48)] public UIModule* UiModule;

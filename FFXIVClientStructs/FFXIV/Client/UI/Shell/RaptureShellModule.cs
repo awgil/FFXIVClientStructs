@@ -8,7 +8,7 @@ namespace FFXIVClientStructs.FFXIV.Client.UI.Shell;
 [StructLayout(LayoutKind.Explicit, Size = 0x1208)]
 public unsafe partial struct RaptureShellModule
 {
-    public static RaptureShellModule* Instance => Framework.Instance()->GetUiModule()->GetRaptureShellModule();
+    public static RaptureShellModule* Instance => Framework.Instance()->GetUIModule()->GetRaptureShellModule();
 
     [FieldOffset(0x2C0)] public int MacroCurrentLine;
     [FieldOffset(0x2B3)] public bool MacroLocked;

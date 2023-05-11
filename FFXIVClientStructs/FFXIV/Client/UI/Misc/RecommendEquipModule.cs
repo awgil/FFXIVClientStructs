@@ -8,7 +8,7 @@ namespace FFXIVClientStructs.FFXIV.Client.UI.Misc;
 [StructLayout(LayoutKind.Explicit, Size = 0x80)]
 public unsafe partial struct RecommendEquipModule
 {
-    public static RecommendEquipModule* Instance() => Framework.Instance()->GetUiModule()->GetRecommendEquipModule();
+    public static RecommendEquipModule* Instance() => Framework.Instance()->GetUIModule()->GetRecommendEquipModule();
 
     [FieldOffset(0x00)] public uint Unk00;
     [FieldOffset(0x04)] public uint SlotCount; // maybe?

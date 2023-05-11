@@ -14,7 +14,7 @@ public unsafe struct AgentMiragePrismPrismBox {
 	[FieldOffset(0x3A)] public byte PageIndex;
 	[FieldOffset(0x48)] public InventoryItem TempDyeItem;
 
-	public static AgentMiragePrismPrismBox* Instance() => Framework.Instance()->GetUiModule()->GetAgentModule()->GetAgentMiragePrismPrismBox();
+	public static AgentMiragePrismPrismBox* Instance() => Framework.Instance()->GetUIModule()->GetAgentModule()->GetAgentMiragePrismPrismBox();
 }
 
 [StructLayout(LayoutKind.Explicit, Size = 0x1BAE0)]

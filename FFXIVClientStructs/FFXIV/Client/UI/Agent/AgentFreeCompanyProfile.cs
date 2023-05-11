@@ -9,7 +9,7 @@ namespace FFXIVClientStructs.FFXIV.Client.UI.Agent
     public unsafe partial struct AgentFreeCompanyProfile
     {
         public static AgentFreeCompanyProfile* Instance() =>
-        (AgentFreeCompanyProfile*)Framework.Instance()->GetUiModule()->GetAgentModule()->GetAgentByInternalId(AgentId.FreeCompanyProfile);
+        (AgentFreeCompanyProfile*)Framework.Instance()->GetUIModule()->GetAgentModule()->GetAgentByInternalId(AgentId.FreeCompanyProfile);
 
         [FieldOffset(0x000)] public AgentInterface AgentInterface;
         //First = 0xe0 00 00 00 00 00 00 00

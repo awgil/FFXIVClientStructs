@@ -7,7 +7,7 @@ namespace FFXIVClientStructs.FFXIV.Client.UI.Misc;
 [StructLayout(LayoutKind.Explicit, Size = 0xE58)]
 public unsafe partial struct RaptureTextModule
 {
-    public static RaptureTextModule* Instance() => Framework.Instance()->GetUiModule()->GetRaptureTextModule();
+    public static RaptureTextModule* Instance() => Framework.Instance()->GetUIModule()->GetRaptureTextModule();
 
     [MemberFunction("E9 ?? ?? ?? ?? 80 EA 20")]
     public partial byte* GetAddonText(uint addonId);

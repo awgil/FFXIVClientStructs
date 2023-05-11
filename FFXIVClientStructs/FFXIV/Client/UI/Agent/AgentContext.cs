@@ -13,7 +13,7 @@ public unsafe partial struct AgentContext
 {
     public static AgentContext* Instance()
     {
-        return (AgentContext*) Framework.Instance()->GetUiModule()->GetAgentModule()->GetAgentByInternalId(
+        return (AgentContext*) Framework.Instance()->GetUIModule()->GetAgentModule()->GetAgentByInternalId(
             AgentId.Context);
     }
 

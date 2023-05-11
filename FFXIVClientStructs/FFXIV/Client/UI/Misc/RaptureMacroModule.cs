@@ -10,7 +10,7 @@ namespace FFXIVClientStructs.FFXIV.Client.UI.Misc;
 [StructLayout(LayoutKind.Explicit, Size = 0x51AA8)]
 public unsafe partial struct RaptureMacroModule
 {
-    public static RaptureMacroModule* Instance => Framework.Instance()->GetUiModule()->GetRaptureMacroModule();
+    public static RaptureMacroModule* Instance => Framework.Instance()->GetUIModule()->GetRaptureMacroModule();
 
     [StructLayout(LayoutKind.Sequential, Size = 0x688)]
     public struct Macro

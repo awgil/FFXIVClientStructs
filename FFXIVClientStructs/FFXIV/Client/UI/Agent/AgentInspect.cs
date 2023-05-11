@@ -14,7 +14,7 @@ public unsafe partial struct AgentInspect
     //0xa used for DeepDungeon
     //0xd
     public static AgentInspect* Instance() =>
-        (AgentInspect*)Framework.Instance()->GetUiModule()->GetAgentModule()->GetAgentByInternalId(AgentId.Inspect);
+        (AgentInspect*)Framework.Instance()->GetUIModule()->GetAgentModule()->GetAgentByInternalId(AgentId.Inspect);
 
     [FieldOffset(0x000)] public AgentInterface AgentInterface;
     //First byte seems to be a bit field

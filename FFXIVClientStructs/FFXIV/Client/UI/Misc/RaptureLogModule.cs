@@ -11,7 +11,7 @@ namespace FFXIVClientStructs.FFXIV.Client.UI.Misc;
 [StructLayout(LayoutKind.Explicit, Size = 0x3480)]
 public unsafe partial struct RaptureLogModule
 {
-    public static RaptureLogModule* Instance() => Framework.Instance()->GetUiModule()->GetRaptureLogModule();
+    public static RaptureLogModule* Instance() => Framework.Instance()->GetUIModule()->GetRaptureLogModule();
 
     [FieldOffset(0x00)] public LogModule LogModule;
 

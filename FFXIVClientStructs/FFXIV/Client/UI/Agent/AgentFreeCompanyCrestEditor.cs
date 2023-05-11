@@ -8,7 +8,7 @@ namespace FFXIVClientStructs.FFXIV.Client.UI.Agent;
 public unsafe partial struct AgentFreeCompanyCrestEditor
 {
     public static AgentFreeCompanyCrestEditor* Instance() =>
-        (AgentFreeCompanyCrestEditor*)Framework.Instance()->GetUiModule()->GetAgentModule()->GetAgentByInternalId(AgentId.FreeCompanyCrestEditor);
+        (AgentFreeCompanyCrestEditor*)Framework.Instance()->GetUIModule()->GetAgentModule()->GetAgentByInternalId(AgentId.FreeCompanyCrestEditor);
 
     [FieldOffset(0x00)] public AgentInterface AgentInterface;
     [FieldOffset(0x60)] public CrestData OriginalCrest;

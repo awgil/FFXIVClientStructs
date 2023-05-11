@@ -12,7 +12,7 @@ namespace FFXIVClientStructs.FFXIV.Client.UI.Misc;
 [StructLayout(LayoutKind.Explicit, Size = 0xDEE8)]
 public unsafe partial struct ConfigModule
 {
-    public static ConfigModule* Instance() => Framework.Instance()->GetUiModule()->GetConfigModule();
+    public static ConfigModule* Instance() => Framework.Instance()->GetUIModule()->GetConfigModule();
 
     public const int ConfigOptionCount = 701;
     [FieldOffset(0x28)] public UIModule* UIModule;

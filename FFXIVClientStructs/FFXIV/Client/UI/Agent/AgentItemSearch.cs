@@ -16,7 +16,7 @@ public unsafe struct AgentItemSearch
     // Market Board
     public static AgentItemSearch* Instance()
     {
-        return (AgentItemSearch*) Framework.Instance()->GetUiModule()->GetAgentModule()->GetAgentByInternalId(
+        return (AgentItemSearch*) Framework.Instance()->GetUIModule()->GetAgentModule()->GetAgentByInternalId(
             AgentId.ItemSearch);
     }
 

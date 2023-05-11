@@ -61,7 +61,7 @@ public unsafe partial struct AgentMap
     [FieldOffset(0x59BF)] public byte IsPlayerMoving;
     [FieldOffset(0x59C7)] public byte IsControlKeyPressed;
 
-    public static AgentMap* Instance() => Framework.Instance()->GetUiModule()->GetAgentModule()->GetAgentMap();
+    public static AgentMap* Instance() => Framework.Instance()->GetUIModule()->GetAgentModule()->GetAgentMap();
 
     [MemberFunction("E8 ?? ?? ?? ?? 48 8D 4C 24 ?? E8 ?? ?? ?? ?? 33 ED 48 8D 15")]
     public partial void SetFlagMapMarker(uint territoryId, uint mapId, float mapX, float mapY, uint iconId = 0xEC91);

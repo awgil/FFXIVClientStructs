@@ -9,7 +9,7 @@ namespace FFXIVClientStructs.FFXIV.Client.UI.Agent;
 [StructLayout(LayoutKind.Explicit, Size = 0xD78)]
 public unsafe partial struct AgentModule
 {
-    public static AgentModule* Instance() => Framework.Instance()->GetUiModule()->GetAgentModule();
+    public static AgentModule* Instance() => Framework.Instance()->GetUIModule()->GetAgentModule();
     
     [FieldOffset(0x0)] public void* VTable;
     [FieldOffset(0x8)] public UIModule* UIModule;

@@ -9,7 +9,7 @@ public unsafe struct AgentLobby
 {
     public static AgentLobby* Instance()
     {
-        return (AgentLobby*) Framework.Instance()->GetUiModule()->GetAgentModule()->GetAgentByInternalId(
+        return (AgentLobby*) Framework.Instance()->GetUIModule()->GetAgentModule()->GetAgentByInternalId(
             AgentId.Lobby);
     }
 

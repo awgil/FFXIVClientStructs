@@ -10,7 +10,7 @@ namespace FFXIVClientStructs.FFXIV.Client.UI.Misc;
 [StructLayout(LayoutKind.Explicit, Size = 0xD8)]
 public unsafe partial struct ItemOrderModule
 {
-    public static ItemOrderModule* Instance() => Framework.Instance()->GetUiModule()->GetItemOrderModule();
+    public static ItemOrderModule* Instance() => Framework.Instance()->GetUIModule()->GetItemOrderModule();
 
     [FieldOffset(0)] public UserFileEvent UserFileEvent;
     [FieldOffset(0x40)] public ItemOrderModuleSorter* InventorySorter;

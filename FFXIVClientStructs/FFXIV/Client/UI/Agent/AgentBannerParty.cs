@@ -10,7 +10,7 @@ namespace FFXIVClientStructs.FFXIV.Client.UI.Agent;
 [StructLayout(LayoutKind.Explicit, Size = 0x38)]
 public unsafe partial struct AgentBannerParty
 {
-    public static AgentBannerParty* Instance() => (AgentBannerParty*)Framework.Instance()->GetUiModule()->GetAgentModule()->GetAgentByInternalId(AgentId.BannerParty);
+    public static AgentBannerParty* Instance() => (AgentBannerParty*)Framework.Instance()->GetUIModule()->GetAgentModule()->GetAgentByInternalId(AgentId.BannerParty);
 
     [FieldOffset(0x0)] public AgentBannerInterface AgentBannerInterface;
 }

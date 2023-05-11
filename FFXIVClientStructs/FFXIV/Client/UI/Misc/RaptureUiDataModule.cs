@@ -9,7 +9,7 @@ namespace FFXIVClientStructs.FFXIV.Client.UI.Misc;
 [StructLayout(LayoutKind.Explicit, Size = 0x5958)]
 public unsafe partial struct RaptureUiDataModule
 {
-    public static RaptureUiDataModule* Instance() => Framework.Instance()->GetUiModule()->GetRaptureUiDataModule();
+    public static RaptureUiDataModule* Instance() => Framework.Instance()->GetUIModule()->GetRaptureUiDataModule();
 
     [FieldOffset(0)] public UserFileEvent UserFileEvent;
 

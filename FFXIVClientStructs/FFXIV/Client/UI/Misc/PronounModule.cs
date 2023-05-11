@@ -8,7 +8,7 @@ namespace FFXIVClientStructs.FFXIV.Client.UI.Misc;
 [StructLayout(LayoutKind.Explicit, Size = 0x3B0)]
 public unsafe partial struct PronounModule
 {
-    public static PronounModule* Instance() => Framework.Instance()->GetUiModule()->GetPronounModule();
+    public static PronounModule* Instance() => Framework.Instance()->GetUIModule()->GetPronounModule();
 
     [MemberFunction("E8 ?? ?? ?? ?? 48 8B 5C 24 ?? EB 0C")]
     [GenerateCStrOverloads]

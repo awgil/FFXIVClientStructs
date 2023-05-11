@@ -15,7 +15,7 @@ public unsafe struct AgentRetainerList
 {
     public static AgentRetainerList* Instance()
     {
-        return (AgentRetainerList*) Framework.Instance()->GetUiModule()->GetAgentModule()->GetAgentByInternalId(
+        return (AgentRetainerList*) Framework.Instance()->GetUIModule()->GetAgentModule()->GetAgentByInternalId(
             AgentId.RetainerList);
     }
 

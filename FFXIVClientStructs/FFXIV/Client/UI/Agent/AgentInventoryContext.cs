@@ -10,7 +10,7 @@ public unsafe partial struct AgentInventoryContext
 {
     public static AgentInventoryContext* Instance()
     {
-        return (AgentInventoryContext*) Framework.Instance()->GetUiModule()->GetAgentModule()->GetAgentByInternalId(
+        return (AgentInventoryContext*) Framework.Instance()->GetUIModule()->GetAgentModule()->GetAgentByInternalId(
             AgentId.InventoryContext);
     }
 

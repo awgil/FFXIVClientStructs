@@ -10,7 +10,7 @@ namespace FFXIVClientStructs.FFXIV.Client.UI.Agent;
 [StructLayout(LayoutKind.Explicit, Size = 0x460)]
 public unsafe partial struct AgentRequest
 {
-    public static AgentRequest* Instance() => (AgentRequest*)Framework.Instance()->GetUiModule()->GetAgentModule()->GetAgentByInternalId(AgentId.Request);
+    public static AgentRequest* Instance() => (AgentRequest*)Framework.Instance()->GetUIModule()->GetAgentModule()->GetAgentByInternalId(AgentId.Request);
 
     [FieldOffset(0x0)] public AgentInterface AgentInterface;
 

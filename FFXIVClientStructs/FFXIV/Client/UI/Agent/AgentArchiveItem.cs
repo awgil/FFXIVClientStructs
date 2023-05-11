@@ -7,7 +7,7 @@ namespace FFXIVClientStructs.FFXIV.Client.UI.Agent;
 [Agent(AgentId.ArchiveItem)]
 [StructLayout(LayoutKind.Explicit, Size = 0x30)]
 public unsafe partial struct AgentArchiveItem {
-    public static AgentArchiveItem* Instance() => (AgentArchiveItem*) Framework.Instance()->GetUiModule()->GetAgentModule()->GetAgentByInternalId(AgentId.ArchiveItem);
+    public static AgentArchiveItem* Instance() => (AgentArchiveItem*) Framework.Instance()->GetUIModule()->GetAgentModule()->GetAgentByInternalId(AgentId.ArchiveItem);
     
     [FieldOffset(0x00)] public AgentInterface AgentInterface;
     [FieldOffset(0x28)] public ArchiveItem* ArchiveItem;

@@ -10,7 +10,7 @@ namespace FFXIVClientStructs.FFXIV.Client.UI.Misc;
 [StructLayout(LayoutKind.Explicit, Size = 0x11D0)]
 public unsafe partial struct ItemFinderModule
 {
-    public static ItemFinderModule* Instance() => Framework.Instance()->GetUiModule()->GetItemFinderModule();
+    public static ItemFinderModule* Instance() => Framework.Instance()->GetUIModule()->GetItemFinderModule();
 
     [FieldOffset(0)] public UserFileEvent UserFileEvent;
 

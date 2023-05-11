@@ -8,7 +8,7 @@ namespace FFXIVClientStructs.FFXIV.Client.UI.Agent;
 [StructLayout(LayoutKind.Explicit, Size = 0x560)]
 public unsafe partial struct AgentRecipeNote
 {
-    public static AgentRecipeNote* Instance() => (AgentRecipeNote*)Framework.Instance()->GetUiModule()->GetAgentModule()->GetAgentByInternalId(AgentId.RecipeNote);
+    public static AgentRecipeNote* Instance() => (AgentRecipeNote*)Framework.Instance()->GetUIModule()->GetAgentModule()->GetAgentByInternalId(AgentId.RecipeNote);
 
     [FieldOffset(0x0)] public AgentInterface AgentInterface;
 

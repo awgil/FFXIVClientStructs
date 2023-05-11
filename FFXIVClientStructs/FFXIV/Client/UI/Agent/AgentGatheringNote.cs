@@ -7,7 +7,7 @@ namespace FFXIVClientStructs.FFXIV.Client.UI.Agent;
 [StructLayout(LayoutKind.Explicit, Size = 0x178)]
 public unsafe partial struct AgentGatheringNote
 {
-    public static AgentGatheringNote* Instance() => (AgentGatheringNote*)Framework.Instance()->GetUiModule()->GetAgentModule()->GetAgentByInternalId(AgentId.GatheringNote);
+    public static AgentGatheringNote* Instance() => (AgentGatheringNote*)Framework.Instance()->GetUIModule()->GetAgentModule()->GetAgentByInternalId(AgentId.GatheringNote);
 
     [FieldOffset(0x0)] public AgentInterface AgentInterface;
 

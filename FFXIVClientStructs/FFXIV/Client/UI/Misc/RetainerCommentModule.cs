@@ -10,7 +10,7 @@ namespace FFXIVClientStructs.FFXIV.Client.UI.Misc;
 [StructLayout(LayoutKind.Explicit, Size = 0x450)]
 public unsafe partial struct RetainerCommentModule
 {
-    public static RetainerCommentModule* Instance() => Framework.Instance()->GetUiModule()->GetRetainerCommentModule();
+    public static RetainerCommentModule* Instance() => Framework.Instance()->GetUIModule()->GetRetainerCommentModule();
 
     [FieldOffset(0)] public UserFileEvent UserFileEvent;
     [FieldOffset(0x40)] public RetainerCommentList Retainers;

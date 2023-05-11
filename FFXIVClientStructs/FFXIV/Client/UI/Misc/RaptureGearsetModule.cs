@@ -9,7 +9,7 @@ namespace FFXIVClientStructs.FFXIV.Client.UI.Misc;
 [StructLayout(LayoutKind.Explicit, Size = 0xB670)]
 public unsafe partial struct RaptureGearsetModule
 {
-    public static RaptureGearsetModule* Instance() => Framework.Instance()->GetUiModule()->GetRaptureGearsetModule();
+    public static RaptureGearsetModule* Instance() => Framework.Instance()->GetUIModule()->GetRaptureGearsetModule();
 
     [FieldOffset(0)] public UserFileEvent UserFileEvent;
     [FieldOffset(0x0000)] public void* VTable;

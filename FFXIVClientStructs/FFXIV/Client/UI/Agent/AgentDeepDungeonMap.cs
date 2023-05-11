@@ -11,7 +11,7 @@ public unsafe struct AgentDeepDungeonMap {
 	[FieldOffset(0x28)] public AgentDeepDungeonMapData* Data;
 
 	public static AgentDeepDungeonMap* Instance() {
-		return Framework.Instance()->GetUiModule()->GetAgentModule()->GetAgentDeepDungeonMap();
+		return Framework.Instance()->GetUIModule()->GetAgentModule()->GetAgentDeepDungeonMap();
 	}
 }
 
