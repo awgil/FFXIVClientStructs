@@ -1,4 +1,5 @@
 ﻿using FFXIVClientStructs.FFXIV.Client.UI;
+using FFXIVClientStructs.FFXIV.Component.GUI.AtkModuleInterface;
 
 namespace FFXIVClientStructs.FFXIV.Component.GUI;
 // Client::UI::Agent::AgentInterface

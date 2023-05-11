@@ -1,4 +1,4 @@
-﻿namespace FFXIVClientStructs.FFXIV.Component.GUI;
+﻿namespace FFXIVClientStructs.FFXIV.Component.GUI.AtkModuleInterface;
 // Component::GUI::AtkModuleInterface::AtkEventInterface
 
 // size = 0x8
