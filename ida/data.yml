@@ -351,6 +351,7 @@ classes:
   Client::System::Input::InputDeviceManager:
     instances:
       - ea: 0x1420ABC18
+        pointer: True
   Client::System::Resource::Handle::ResourceHandleFactory:
   Client::UI::Agent::AgentMap::MapMarkerStructSearch:
   Client::UI::Atk2DMap:
@@ -1043,6 +1044,7 @@ classes:
   Client::System::Framework::TaskManager:
     instances:
       - ea: 0x1420ABC30
+        pointer: True
     vtbls:
       - ea: 0x1418E0640
     funcs:
@@ -1070,8 +1072,10 @@ classes:
   Client::System::Framework::Framework:
     instances:
       - ea: 0x1420A83B8
+        pointer: True
       - ea: 0x1420A9F58
         name: InstancePointer2
+        pointer: True
     vtbls:
       - ea: 0x1418E0698
     vfuncs:
@@ -1982,6 +1986,7 @@ classes:
   Client::Graphics::Kernel::DeviceDX11:
     instances:
       - ea: 0x1420A8580
+        pointer: True
     vtbls:
       - ea: 0x1419144B0
         base: Client::Graphics::Kernel::DeviceWin
@@ -2025,6 +2030,7 @@ classes:
   Client::Graphics::Render::GraphicsConfig:
     instances:
       - ea: 0x1420A9F48
+        pointer: True
     vtbls:
       - ea: 0x14191B9A8
         base: Client::Graphics::Singleton
@@ -2075,6 +2081,7 @@ classes:
   Client::Graphics::Render::OffscreenRenderingManager:
     instances:
       - ea: 0x1420C3158
+        pointer: True
     vtbls:
       - ea: 0x14191BBD8
     funcs:
@@ -3220,6 +3227,7 @@ classes:
   Client::LayoutEngine::LayoutWorld:
     instances:
       - ea: 0x1420D1328
+        pointer: True
     vtbls:
       - ea: 0x141936D20
         base: Client::LayoutEngine::IManagerBase
@@ -6751,6 +6759,7 @@ classes:
   Client::Graphics::Physics::BonePhysicsUpdater:
     instances:
       - ea: 0x1420C3170
+        pointer: True
     vtbls:
       - ea: 0x141A82130
         base: Client::Graphics::Singleton
@@ -6940,16 +6949,22 @@ classes:
     instances:
       - ea: 0x1420A97C0
         name: DefaultSpace
+        pointer: True
       - ea: 0x1420A97C8
         name: ApricotSpace
+        pointer: True
       - ea: 0x1420A97D0
         name: AnimationSpace
+        pointer: True
       - ea: 0x1420A97D8
         name: UISpace
+        pointer: True
       - ea: 0x1420A97E0
         name: FileSpace
+        pointer: True
       - ea: 0x1420A97E8
         name: SoundSpace
+        pointer: True
     vtbls:
       - ea: 0x1418D80C0
   Client::System::Memory::IMemoryModule:
