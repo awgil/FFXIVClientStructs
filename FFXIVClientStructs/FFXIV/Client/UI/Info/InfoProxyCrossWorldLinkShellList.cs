@@ -6,7 +6,7 @@ namespace FFXIVClientStructs.FFXIV.Client.UI.Info;
 [StructLayout(LayoutKind.Explicit, Size = 0x558)]
 public unsafe partial struct InfoProxyCrossWorldLinkShell
 {
-    [FieldOffset(0x00)] public InfoProxyInvitedInterface InfoProxyInvitedInterface;
+    [FieldOffset(0x00)] public InfoProxyInterface InfoProxyInterface;
     [FieldOffset(0x28)] public uint NumInvites;
     //was 1 when 2 Invites
     [FieldOffset(0x30)] public byte Unk30;

@@ -73,7 +73,7 @@ public unsafe partial struct AgentMap
     public partial void OpenMap(OpenMapInfo* data);
 
     [MemberFunction("48 89 5C 24 ?? 48 89 6C 24 ?? 48 89 7C 24 ?? 41 54 41 55 41 56 48 83 EC 20")]
-    public partial void AddGatheringTempMarker(uint styleFlags, int mapX, int mapY, uint iconId, int radius, Utf8String* tooltip);
+    public partial void AddGatheringTempMapMarker(uint styleFlags, int mapX, int mapY, uint iconId, int radius, Utf8String* tooltip);
     
     [MemberFunction("40 53 48 83 EC ?? B2 ?? C6 81 ?? ?? ?? ?? ?? 48 8B D9 E8 ?? ?? ?? ?? 33 D2")]
     public partial void ResetMiniMapMarkers();
@@ -118,10 +118,10 @@ public unsafe partial struct AgentMap
         SetFlagMapMarker(territoryId, mapId, mapX, mapY, iconId);
     }
 
-    public void AddGatheringTempMarker(int mapX, int mapY, int radius, uint iconId = 0, uint styleFlags = 4, string? tooltip = null)
+    public void AddGatheringTempMapMarker(int mapX, int mapY, int radius, uint iconId = 0, uint styleFlags = 4, string? tooltip = null)
     {
         var toolTip = Utf8String.FromString(tooltip ?? string.Empty);
-        AddGatheringTempMarker(styleFlags, mapX, mapY, iconId, radius, toolTip);
+        AddGatheringTempMapMarker(styleFlags, mapX, mapY, iconId, radius, toolTip);
         toolTip->Dtor();
     }
 

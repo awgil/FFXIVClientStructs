@@ -1400,7 +1400,7 @@ classes:
   Common::Configuration::ConfigBase::ChangeEventInterface:
     vtbls:
       - ea: 0x1418EC478
-  Client::UI::Info::InfoProxyCommonlist:
+  Client::UI::Info::InfoProxyCommonList:
     vtbls:
       - ea: 0x1418EC578
         base: Client::UI::Info::InfoProxyPageInterface
@@ -1425,12 +1425,13 @@ classes:
   Client::UI::Info::InfoProxyCrossRealm:
     instances:
       - ea: 0x1420ABB98
+        pointer: True
     vtbls:
       - ea: 0x1418EC688
         base: Client::UI::Info::InfoProxyInterface
     funcs:
       0x1400ED6A0: ctor
-      0x1400ED780: GetPtr  # Static
+      0x1400ED780: GetInstance  # Static
       0x1400F0350: IsCrossRealmParty # Static
       0x1400F03D0: IsCrossRealmPartyLeader # Static
       0x1400F03F0: IsAllianceRaid # Static
@@ -1441,14 +1442,14 @@ classes:
       0x1400F05C0: GetPartyMemberCount_2 # Static
       0x1400F0600: GetGroupIndex # Static
       0x1400F0B90: IsLocalPlayerInParty # Static
-      0x1400F0BD0: GetMember # Static
+      0x1400F0BD0: GetGroupMember # Static
       0x1400F0C80: GetMemberByContentId # Static
       0x1400F0D50: GetMemberByObjectId # Static
       0x1400F0E00: IsContentIdInParty # Static
   Client::UI::Info::InfoProxyParty:
     vtbls:
       - ea: 0x1418EC6E8
-        base: Client::UI::Info::InfoProxyCommonlist
+        base: Client::UI::Info::InfoProxyCommonList
     funcs:
       0x1400F0F80: ctor
       0x14016F340: dtor2
@@ -1497,13 +1498,13 @@ classes:
   Client::UI::Info::InfoProxyLinkshellMember:
     vtbls:
       - ea: 0x1418EDD28
-        base: Client::UI::Info::InfoProxyCommonlist
+        base: Client::UI::Info::InfoProxyCommonList
     funcs:
       0x140103E60: ctor
   Client::UI::Info::InfoProxyFriendList:
     vtbls:
       - ea: 0x1418EDE20
-        base: Client::UI::Info::InfoProxyCommonlist
+        base: Client::UI::Info::InfoProxyCommonList
     funcs:
       0x140104D40: ctor
       0x14016F180: dtor2
@@ -1517,7 +1518,7 @@ classes:
   Client::UI::Info::InfoProxySearch:
     vtbls:
       - ea: 0x1418EDF98
-        base: Client::UI::Info::InfoProxyCommonlist
+        base: Client::UI::Info::InfoProxyCommonList
     funcs:
       0x1401095C0: ctor
   Client::UI::Info::InfoProxyItemSearch:
@@ -1537,35 +1538,35 @@ classes:
   Client::UI::Info::InfoProxyFreeCompanyMember:
     vtbls:
       - ea: 0x1418EE188
-        base: Client::UI::Info::InfoProxyCommonlist
+        base: Client::UI::Info::InfoProxyCommonList
     funcs:
       0x14010A950: ctor
   Client::UI::Info::InfoProxyLinkShellChat:
     vtbls:
       - ea: 0x1418EE280
         base: Client::UI::Info::InfoProxyInterface
-  Client::UI::Info::InfoProxyInvitedlist:
+  Client::UI::Info::InfoProxyInvitedList:
     vtbls:
       - ea: 0x1418EE2E0
-        base: Client::UI::Info::InfoProxyCommonlist
+        base: Client::UI::Info::InfoProxyCommonList
     funcs:
       0x14010C710: ctor
   Client::UI::Info::InfoProxy21:
     vtbls:
       - ea: 0x1418EE3D8
-        base: Client::UI::Info::InfoProxyInvitedlist
+        base: Client::UI::Info::InfoProxyInvitedList
     funcs:
       0x14010CC20: ctor
   Client::UI::Info::InfoProxy22:
     vtbls:
       - ea: 0x1418EE4D0
-        base: Client::UI::Info::InfoProxyInvitedlist
+        base: Client::UI::Info::InfoProxyInvitedList
     funcs:
       0x14010CC90: ctor
   Client::UI::Info::InfoProxy23:
     vtbls:
       - ea: 0x1418EE5C8
-        base: Client::UI::Info::InfoProxyCommonlist
+        base: Client::UI::Info::InfoProxyCommonList
     funcs:
       0x14010CD00: ctor
   Client::UI::Info::InfoProxy24:
@@ -1607,7 +1608,7 @@ classes:
   Client::UI::Info::InfoProxyCrossWorldLinkShellMember:
     vtbls:
       - ea: 0x1418EE988
-        base: Client::UI::Info::InfoProxyCommonlist
+        base: Client::UI::Info::InfoProxyCommonList
     funcs:
       0x140116040: ctor
   Client::UI::Info::InfoProxyCircleList:
@@ -3542,7 +3543,7 @@ classes:
       0x14066AF70: ExecuteSlotById
       0x14066AFB0: GetSlotById
       0x14066F640: GetSlotAppearance   # static
-  Client::UI::Misc::RaptureHotbarModule::HotbarSlot:
+  Client::UI::Misc::RaptureHotbarModule::HotBarSlot:
     funcs:
       # Convention(ish?): Get just returns a value, Load actually mutates the HotbarSlot passed to it
       0x140668DD0: Set
@@ -3581,7 +3582,7 @@ classes:
       0x140680A00: LinkGlamourPlate
       0x140680B20: RemoveGlamourPlateLink
       0x140680B30: HasLinkedGlamourPlate
-      0x140680D20: GetClassJobIcon
+      0x140680D20: GetClassJobIconForGearset
   Client::UI::Misc::ItemFinderModule:
     vtbls:
       - ea: 0x1419490A0

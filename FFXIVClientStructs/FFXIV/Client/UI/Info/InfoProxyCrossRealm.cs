@@ -31,7 +31,7 @@ public unsafe partial struct InfoProxyCrossRealm
     }
 
     [MemberFunction("E8 ?? ?? ?? ?? 80 B8 ?? ?? ?? ?? ?? 74 5C")]
-    public static partial InfoProxyCrossRealm* Instance();
+    public static partial InfoProxyCrossRealm* GetInstance();
 
     [MemberFunction("E8 ?? ?? ?? ?? F6 D8 1A C0")]
     public static partial bool IsCrossRealmParty();

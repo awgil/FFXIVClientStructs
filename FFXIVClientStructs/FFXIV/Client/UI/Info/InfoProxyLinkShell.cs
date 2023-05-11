@@ -5,7 +5,7 @@ namespace FFXIVClientStructs.FFXIV.Client.UI.Info;
 [StructLayout(LayoutKind.Explicit, Size = 0x1E8)]
 public unsafe partial struct InfoProxyLinkShell
 {
-    [FieldOffset(0x000)] public InfoProxyInterface InfoProxyInterface;
+    [FieldOffset(0x000)] public InfoProxyPageInterface InfoProxyPageInterface;
     [FieldOffset(0x038)] public Utf8String UnkString0;
     [FieldOffset(0x0A0)] public Utf8String UnkString1;
 

@@ -1,7 +1,7 @@
-﻿using FFXIVClientStructs.FFXIV.Client.UI;
+﻿using FFXIVClientStructs.FFXIV.Component.GUI;
 using FFXIVClientStructs.FFXIV.Component.GUI.AtkModuleInterface;
 
-namespace FFXIVClientStructs.FFXIV.Component.GUI;
+namespace FFXIVClientStructs.FFXIV.Client.UI.Agent;
 // Client::UI::Agent::AgentInterface
 //   Component::GUI::AtkModuleInterface::AtkEventInterface
 
@@ -28,5 +28,5 @@ public unsafe partial struct AgentInterface
     public partial bool IsAgentActive();
 
     [VirtualFunction(8)]
-    public partial uint GetAddonID();
+    public partial uint GetAddonId();
 }
