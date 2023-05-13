@@ -20,7 +20,7 @@ globals:
   0x1421005A0: g_LocalContentId
 #fail   0x1421057A8: g_Client::Game::UI::Buddy.Pet # not a pointer
 #fail   0x1421057B8: g_Client::Game::UI::Buddy.Pet.BuffList # not a pointer
-  0x142102400: g_Client::Game::UI::Buddy.CompanionStats.TimeRemaining  # not a pointer
+  0x142102400: g_Client::Game::UI::Buddy::CompanionStats.TimeRemaining  # not a pointer
   0x142102450: g_Client::Game::UI::Buddy.BattleBuddyListPtr # Member of UIState
   # 0x14210E810: g_TitleController # commented out because it no longer has an xref
   0x14210E818: g_TitleList
@@ -758,7 +758,7 @@ classes:
         pointer: False
     funcs:
       0x14094B5C0: ctor
-  Client::Game::UI::Buddy.CompanionStats:
+  Client::Game::UI::Buddy::CompanionStats:
     instances:
       - ea: 0x1421023F8
         pointer: False
