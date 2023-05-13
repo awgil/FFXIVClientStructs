@@ -43,10 +43,12 @@ public unsafe struct StdMap<TKey, TValue>
         public Node* Parent;
         public Node* Right;
         public byte Color;
-        public bool IsNil;
+        public byte IsNilRaw;
         public byte _18;
         public byte _19;
         public StdPair<TKey, TValue> KeyValuePair;
+
+        public bool IsNil => IsNilRaw != 0;
 
         public Node* Next()
         {

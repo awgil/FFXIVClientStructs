@@ -36,10 +36,12 @@ public unsafe struct StdSet<TKey> where TKey : unmanaged {
 		public Node* Parent;
 		public Node* Right;
 		public byte Color;
-		public bool IsNil;
+		public byte IsNilRaw;
 		public byte _18;
 		public byte _19;
 		public TKey Key;
+
+		public bool IsNil => IsNilRaw != 0;
 
 		public Node* Next() {
 			Debug.Assert(!IsNil, "Tried to increment a head node.");
