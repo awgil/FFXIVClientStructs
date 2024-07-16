@@ -308,6 +308,12 @@ if api is None:
                 if any(current_func_name.startswith(prefix) for prefix in ("sub_", "nullsub_", "loc_", "qword_", "unknown_libname_")):
                     return proposed_qualified_func_name
 
+                # If the current function is marked as library, most likely the auto assigned name is incorrect
+                #func = ida_funcs.get_func(ea)
+                #if func and func.flags & ida_funcs.FUNC_LIB:
+                #    print(f'Renaming auto-generated library function name {current_func_name} at 0x{ea:X}')
+                #    return proposed_qualified_func_name
+
                 return None
 
             def ensure_function_defined(self, ea):
