@@ -189,6 +189,17 @@ class BaseApi(object):
         :rtype: Optional[str]
         """
 
+    def ensure_function_defined(self, ea):
+        """
+        Ensure function is defined at specific address.
+        By default, functions that aren't referenced aren't created during analysis.
+        :param ea: Func effective address
+        :type ea: int
+        :return: Success (true if function either already existed or was successfully created).
+        :rtype: bool
+        """
+        return False
+
 
 api = None
 
@@ -298,6 +309,13 @@ if api is None:
                     return proposed_qualified_func_name
 
                 return None
+
+            def ensure_function_defined(self, ea):
+                if ida_funcs.get_func(ea):
+                    return True
+                added = ida_funcs.add_func(ea)
+                print(f'Created new function at 0x{ea:X}' if added else f'Failed to create function at 0x{ea:X}')
+                return added
 
 
         api = IdaApi()
@@ -916,6 +934,7 @@ class FfxivClass:
         :return: None
         """
         for func_ea, proposed_func_name in self.funcs.items():
+            api.ensure_function_defined(func_ea)
             current_func_name = api.get_addr_name(func_ea)  # type: str
 
             func_name = api.format_func_name(func_ea, current_func_name, proposed_func_name, self.name)
