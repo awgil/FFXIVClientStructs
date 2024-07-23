@@ -97,8 +97,8 @@ class ExcelDataPagination:
 
     def parse(self):
         # type: () -> None
-        self.start_id = int.from_bytes(self.data[0:2], "big")
-        self.row_count = int.from_bytes(self.data[2:4], "big")
+        self.start_id = int.from_bytes(self.data[0:4], "big")
+        self.row_count = int.from_bytes(self.data[4:8], "big")
 
     def __repr__(self):
         # type: () -> str
@@ -133,9 +133,9 @@ class ExcelHeaderFile:
                     self.data[
                         32
                         + (self.header.column_count * 4)
-                        + (i * 4) : 32
+                        + (i * 8) : 32
                         + (self.header.column_count * 4)
-                        + ((i + 1) * 4)
+                        + ((i + 1) * 8)
                     ]
                 )
             )
@@ -145,7 +145,7 @@ class ExcelHeaderFile:
                 self.data[
                     32
                     + (self.header.column_count * 4)
-                    + (self.header.page_count * 4)
+                    + (self.header.page_count * 8)
                     + i
                 ]
             )
