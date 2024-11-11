@@ -19,9 +19,9 @@ public unsafe partial struct InfoProxyItemSearch {
     [FieldOffset(0x20)] public uint SearchItemId;
 
     // Following are used for requesting item data from the server in RequestData
-    // [FieldOffset(0x24)] public byte Unk_0x24; // ?
-    // [FieldOffset(0x25)] public byte Unk_0x25; // ?
-    // [FieldOffset(0x28)] public byte Unk_0x28;
+    [FieldOffset(0x24)] public byte Unk_0x24; // ?
+    [FieldOffset(0x25)] public byte Unk_0x25; // ?
+    [FieldOffset(0x28)] public uint Unk_0x28;
 
     /// <summary>
     /// All items currently available on the general marketboard for the last specified search term (found in <see cref="SearchItemId"/>.
@@ -51,13 +51,16 @@ public unsafe partial struct InfoProxyItemSearch {
     [FieldOffset(0x5B68), FixedSizeArray] internal FixedSizeArray10<uint> _wishlistItems;
     [FieldOffset(0x5B90)] public uint WishlistSize;
 
+    [FieldOffset(0x5B95)] public bool WaitingForWishlistUpdate;
+    [FieldOffset(0x5B96)] public bool WaitingForListings;
+
     // [FieldOffset(0x5B96)] public byte Unk_0x5B96; // controls if AddData gets called? (ResultsPresent?)
 
     [MemberFunction("40 57 41 56 48 83 EC 48 83 3A 00")]
     public partial void ProcessItemHistory(nint packet);
 
     [MemberFunction("E8 ?? ?? ?? ?? 8B 3F 85 FF")]
-    public partial nint ProcessRequestResult(nint a2, nint a3, nint a4, int a5, byte a6, int a7);
+    public partial void ProcessRequestResult(byte numItems, uint errorMessageId);
 
     /// <summary>
     /// Load player retainer information from a packet into the
@@ -75,6 +78,16 @@ public unsafe partial struct InfoProxyItemSearch {
     /// <returns>Returns true if successful.</returns>
     [MemberFunction("40 56 48 8B C2")]
     public partial bool SetLastPurchasedItem(MarketBoardListing* listing);
+
+    /// <summary>
+    /// Purchase item set by previous SetLastPurchasedItem call.
+    /// </summary>
+    /// <returns></returns>
+    [MemberFunction("E9 ?? ?? ?? ?? E8 ?? ?? ?? ?? 48 8B 8B ?? ?? ?? ?? 48 83 C4 20")]
+    public partial bool SendPurchaseRequestPacket();
+
+    [MemberFunction("E8 ?? ?? ?? ?? 41 8B 5E 04 8B C3")]
+    public partial void ProcessPurchaseResponse(uint itemId, uint errorMessageId);
 }
 
 [GenerateInterop]
@@ -143,8 +156,8 @@ public struct PlayerRetainerInfo {
     [FieldOffset(0x00)] public ulong RetainerId;
     [FieldOffset(0x08)] public byte TownId;
     [FieldOffset(0x09)] public bool SellingItems;
-    // [FieldOffset(0x0A)] public byte Unk_0x0A;
+    [FieldOffset(0x0A)] public byte Unk_0x0A;
 
-    // [FieldOffset(0x0C)] public int Unk_0x0C; // Some kind of timestamp?
+    [FieldOffset(0x0C)] public int Unk_0x0C; // Some kind of timestamp?
     [FieldOffset(0x10)] public Utf8String Name;
 }

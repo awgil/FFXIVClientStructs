@@ -11,6 +11,8 @@ public unsafe partial struct InventoryManager {
     public static partial InventoryManager* Instance();
 
     [FieldOffset(0x1E08)] public InventoryContainer* Inventories;
+    [FieldOffset(0x2158), FixedSizeArray] internal FixedSizeArray20<ulong> _retainerMarketUnitPrice;
+    [FieldOffset(0x21F8), FixedSizeArray] internal FixedSizeArray20<byte> _retainerMarketF18;
 
     [MemberFunction("E8 ?? ?? ?? ?? 40 38 78 10")]
     public partial InventoryContainer* GetInventoryContainer(InventoryType inventoryType);
@@ -45,6 +47,15 @@ public unsafe partial struct InventoryManager {
 
     [MemberFunction("E8 ?? ?? ?? ?? 8B F0 39 43 78")]
     public partial uint GetRetainerGil();
+
+    [MemberFunction("E8 ?? ?? ?? ?? EB 6E 84 D2")]
+    public partial int MoveFromRetainerMarketToPlayerInventory(InventoryType srcInv, ushort srcSlot, uint quantity);
+
+    [MemberFunction("48 83 EC 38 66 83 FA 14")]
+    public partial void ModifyRetainerMarketPrice(ushort slot, uint unitPrice);
+
+    [MemberFunction("E8 ?? ?? ?? ?? 8B 57 58 33 DB")]
+    public partial void MoveToRetainerMarket(InventoryType srcInv, ushort srcSlot, InventoryType dstInv, ushort dstSlot, uint quantity, uint unitPrice);
 
     [MemberFunction("E8 ?? ?? ?? ?? 8B F8 39 BB ?? ?? ?? ?? 74 58 44 8B C7 BA ?? ?? ?? ?? 49 8B CF")]
     public partial uint GetFreeCompanyGil();
